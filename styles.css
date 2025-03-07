@@ -1,0 +1,80 @@
+body{
+    background-color: lightslategrey;
+    max-width: 1000px;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color:aqua;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+p.indent{
+    font-size: 20px;
+    line-height: 1;
+    text-indent: 30px;
+    word-spacing: 10px;
+}
+
+p{
+    font-size: 20px;
+    line-height: 1;
+    word-spacing: 15px;
+    font-family: "Sofia", sans-serif;
+}
+
+div{
+    outline-style: dashed;
+    outline-color: rgb(15, 15, 41);
+    outline-width: 10px;
+    outline-offset: 5px;
+
+}
+span{
+    display: inline-block;
+}
+
+li{
+    list-style-type: square;
+    display: inline;
+    font-weight: bold;
+}
+li:hover{
+    background-color: rgb(75, 96, 96);
+    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid;
+
+}
+tr:nth-child(even ) {
+    background-color: rgb(104, 80, 127);
+}
+td:hover{
+    background-color: beige;
+}
+
+td, th{
+    height: 10%;
+    vertical-align: bottom;
+}
+
+.fa-volleyball{
+    font-size: 30px;
+    color: azure;
+}
+.fa-comment{
+    font-size: 30px;
+}
