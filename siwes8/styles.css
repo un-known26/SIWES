@@ -95,16 +95,47 @@ img:hover{
 
 
 /* Responsive layout - makes one column layout instead of a two-column layout on a smaller screen */
-@media (max-width: 800px) {
+/*Phones*/
+@media (min-width: 500px) {
     .flex-container{
+        max-width: 500px;
         flex-direction: column;
+        background-color: rgb(72, 130, 217);
+        color: black;
     }
-
-    /* For Tablet */
     .container > div {
-        grid-area: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
+
+/*Tablet*/
+@media (min-width: 768px) {
+    .flex-container{
+        max-width: 768px;
+        flex-direction: column;
+        background-color: rgb(217, 202, 249);
+        color: whitesmoke;
+    }
+    .container > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Laptop */
+@media (min-width: 1020px) {
+    .flex-container{
+        max-width: 1020px;
+        background-color: rgb(208, 176, 81);
+    }
+    .container > div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
 
 aside {
     width: 30%;
