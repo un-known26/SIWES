@@ -4,11 +4,15 @@ body {
     font-size: 16px;
 }
 
-#sectionA {
+.sectionA {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+img {
+    width: 40px;
+    height: 40px;
 }
 a {
     text-decoration: none;
@@ -16,39 +20,41 @@ a {
 b {
     color: green;
 }
-#left {
+.left {
     border: 1px solid white;
     color:white;
     margin: 20px; 
-    font-size: 1.8em;
+    font-size: 32px;
     font-weight: bold;
 }
-#right {
-    border: 1px solid green;
-    color: green;
+.right {
+    border: 1px solid rgb(36, 218, 36);
+    border-radius: 8px;
+    color: rgb(36, 192, 36);
     margin: 20px;
     padding: 10px;
     font-weight: bold;
 }
 
-#sectionB {
+.sectionB {
     border: 1px solid rgb(76, 67, 67);
-    padding: 30px 10px;
+    padding: 50px 10px;
     margin:auto;
     text-align: center;
     background-color: rgb(49, 108, 72);
 }
 
-#sectionB #top {
+.sectionB .top {
     color: white;
     font-size: 32px;
     font-weight: bold;
 }
-#sectionB #center {
+.sectionB .center {
     color:grey;
     max-width: 800px;
+    margin: auto;
 }
-#sectionB #bottom {
+.sectionB .bottom {
     color: black;
     background-color: green;
     border-radius: 5px;
@@ -57,104 +63,105 @@ b {
     font-weight: bold;
 }
 
-#sectionC {
+.sectionC {
     padding: 30px 15px;
     
 }
-#sectionC div {
+.sectionC div {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
     color: white
 }
-#sectionC ul {
+.sectionC ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
+    gap: 20px;
+    padding: 0;
 }
-#sectionC li {
+.sectionC li {
     border: 1px solid rgb(79, 62, 62);
     padding: 15px;
-    margin: 15px 10px;
     border-radius: 5px;
-    max-width: 300px;
+    max-width: 500px;
 }
-#sectionC li:hover {
+.sectionC li:hover {
     border: 1px solid green;
 }
-#sectionC #mid {
+.sectionC .mid {
     font-size: 32px;
     color: white;
     font-weight: bold;
 }
-#sectionC #low{
+.sectionC .low{
     color: grey;
     font-size: 16px;
 }
 
-#sectionD {
+.sectionD {
     /*border: 1px solid white;*/
     padding: 15px 10px;
     color: white;
 }
-#sectionD #first {
+.sectionD .first {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
 }
-#sectionD #second {
+.sectionD .second {
     text-align: center;
     margin-bottom: 10px;
 }
-#sectionD ul {
+.sectionD ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
+    padding: 0;
+    gap: 20px
 }
-#sectionD li {
+.sectionD li {
     background-color: rgb(45, 43, 43);
     padding: 10px;
     border-radius: 5px;
-    width: 300px;
+    max-width: 500px;
     margin: 10px;
 }
-#sectionD li:hover {
+.sectionD li:hover {
     border: 1px solid green;
 }
-#sectionD #mid {
+.sectionD .mid {
     font-size: 32px;
     font-weight: bold;
 }
-#sectionD #low {
+.sectionD .low {
     color: grey;
     font-size: 16px;
 }
 
 
-#sectionE {
+.sectionE {
     /*border: 1px solid green;*/
     background-color: lightgreen;
     color: white;
     text-align: center;
     padding: 30px 15px;
 }
-#sectionE #top {
+.sectionE .top {
     font-size: 32px;
     font-weight: bold;
     padding: 20px;
 }
-#sectionE #center {
+.sectionE .center {
     color:grey;
     font-size: 16px;
     max-width: 800px;
     margin:5px;
     padding: 10px;
 }
-#sectionE #bottom {    
+.sectionE .bottom {    
     background-color: green;
     color: black;
     border-radius: 5px;
@@ -163,12 +170,12 @@ b {
     font-weight: bold;
 }
 
-#sectionF {
+.sectionF {
    /* border: 1px solid white;*/
     text-align: center;
     padding: 10px;
 }
-#lastMan {
+.lastMan {
     border-top: 1px solid grey;
     color: white;
     font-size: 16px;
@@ -177,13 +184,28 @@ b {
     padding-top: 10px;
 }
 
-@media(max-width: 750px) {
-    #sectionC ul, #sectionD ul {
+@media(min-width: 500px) {
+    .left, .right {
+        font-size:32px;
+    }
+
+    .sectionC ul, .sectionD ul {
         flex-direction: column;
         align-items: center;
     }
 
-    #sectionC li, #sectionD li {
+    .sectionC li, .sectionD li {
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 700px) {
+    .sectionC ul, .sectionD ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sectionC li, .sectionD li {
         max-width: 90%;
     }
 }
