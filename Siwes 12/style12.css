@@ -1,18 +1,16 @@
 body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    color: white;
 }
 
 .sectionA {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    padding: 5px;
+    background-color: black;
 }
 img {
-    width: 40px;
-    height: 40px;
+    max-width: 4rem;
+    height: auto;
 }
 a {
     text-decoration: none;
@@ -21,11 +19,15 @@ b {
     color: green;
 }
 .left {
-    border: 1px solid white;
+/*    border: 1px solid white; */
     color:white;
-    margin: 20px; 
-    font-size: 32px;
+    margin: 10px; 
+    font-size: 5rem;
     font-weight: bold;
+    text-shadow: 1px 1px 110px rgb(213, 192, 192);
+    position: fixed;
+    top: 0;
+    left: 20px;
 }
 .right {
     border: 1px solid rgb(36, 218, 36);
@@ -34,68 +36,94 @@ b {
     margin: 20px;
     padding: 10px;
     font-weight: bold;
+    font-size: 2rem;
+    position: fixed;
+    top: 10px;
+    right: 20px;
 }
 
 .sectionB {
     border: 1px solid rgb(76, 67, 67);
     padding: 50px 10px;
-    margin:auto;
     text-align: center;
     background-color: rgb(49, 108, 72);
+    max-width: 1800px;
+    height: 350px;
+    position: relative;
+    top: 100px;
+    margin-bottom: 200px;
+}
+.sectionB .top, .sectionB .center,
+ .sectionB .bottom {
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    
 }
 
 .sectionB .top {
     color: white;
-    font-size: 32px;
+    font-size: 6vw;
     font-weight: bold;
+    top: 0;
+    left: 40%;
+    translate: -38% /*X-Axis*/;
 }
 .sectionB .center {
     color:grey;
+    font-size: 1.5rem;
     max-width: 800px;
-    margin: auto;
+    top: 230px;
+    left: 50%;
+    translate: -50% /*X-Axis*/;
 }
 .sectionB .bottom {
     color: black;
     background-color: green;
     border-radius: 5px;
-    margin: 15px 100px;
     padding: 10px 20px;
     font-weight: bold;
+    top: 350px;
+    left: 50%;
+    translate: -50% /*X-Axis*/;
 }
 
 .sectionC, .sectionD {
     padding: 30px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
     
 }
-.sectionC div, .sectionD .first {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: white
-}
+    
 .sectionC ul, .sectionD ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
     gap: 20px;
     padding: 0;
+    
 }
 .sectionC li, .sectionD li {
     border: 1px solid rgb(79, 62, 62);
-    max-width: 100%;
+    flex-grow: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
 }
 .sectionC li:hover, .sectionD li:hover {
     border: 1px solid green;
 }
-.sectionC .mid, .sectionD .mid {
+.sectionC .mid, .sectionD .first {
     font-size: 32px;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
-.sectionC .low, .sectionD .low{
+.sectionC .low, .sectionD .second{
     color: grey;
     font-size: 16px;
 }
@@ -113,31 +141,49 @@ b {
 }
 
 .sectionE {
-    /*border: 1px solid green;*/
-    background-color: lightgreen;
+    border: 1px solid rgba(3, 193, 146, 0.925);
+    border-radius: 50px;
+    background-color: rgba(3, 193, 146, 0.925);
     color: white;
+    max-width: 1155px;
     text-align: center;
     padding: 30px 15px;
+    position: relative;
+    left: 12%;
+    translate: -10%;
+    height: 340px;
 }
+.sectionE .top, .sectionE .center,
+.sectionE .bottom {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+}
+
 .sectionE .top {
-    font-size: 32px;
+    font-size: 4rem;
     font-weight: bold;
-    padding: 20px;
+    top: 0;
+    left: 10%;
+    translate: -9%;
 }
 .sectionE .center {
     color:grey;
-    font-size: 16px;
+    font-size: 1.6rem;
     max-width: 800px;
-    margin:5px;
-    padding: 10px;
+    top: 200px;
+    left: 44%;
+    translate: -40%;
 }
 .sectionE .bottom {    
     background-color: green;
     color: black;
     border-radius: 5px;
-    margin-top: 20px;
     padding: 10px 20px;
     font-weight: bold;
+    top: 320px;
+    left: 49%;
+    translate: -50%;
 }
 
 .sectionF {
@@ -150,29 +196,187 @@ b {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-right: auto;
     padding-top: 10px;
 }
 
+
+
+
 @media(max-width: 600px) {
-    .left, .right {
-        font-size:28px;
+.sectionA {
+    position: relative;
+}
+
+    .left{
+        font-size: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size:40px;
+        max-width: auto;
     }
 
+    img {
+        max-width: 2rem;
+        height: auto;
+    }
+
+    .sectionB{
+        height: 300px;
+        max-width: 100%;
+        padding: 5px;
+        position: relative;
+        top: 40px;
+    }
+    .sectionE {
+        max-width: 90%;
+        height: 300px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .sectionB .top,
+    .sectionB .center,
+    .sectionB .bottom,
+    .sectionE .top,
+    .sectionE .center,
+    .sectionE .bottom {
+        position: absolute;
+        transform: none;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .sectionB .center,
+    .sectionE .center {
+        font-size: 1rem;
+        top: 90px;
+    }
+
+    .sectionB .bottom,
+    .sectionE .bottom {
+        font-size: 1rem;
+        top: 230px;
+    }
+
+
     .sectionC ul, .sectionD ul {
-        flex-wrap: nowrap;
         flex-direction: column;
-        justify-content: center;
         gap: 20px;
     }
 
     .sectionC li, .sectionD li {
         max-width: 100%;
     }
+
+    .sectionC .mid, .sectionD .first {
+        font-size: 24px;
+    }
+
+    .sectionC .low, .sectionD .second {
+        font-size: 14px;
+    }
+
+    .sectionF .lastMan {
+        font-size: 14px;
+    }
+
 }
 
-@media(max-width: 900px) {
-    .sectionC li, .sectionD li {
-        max-width: 30%;
+@media(max-width: 700px) {
+    .sectionA {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
+    
+        .left{
+            font-size: 2.5vw;
+            margin: 5px;
+        }
+        
+        .right {
+            font-size:1vw;
+            margin: 5px;
+            padding: 0;
+            max-width: 200px;
+        }
+    
+        img {
+            max-width: 2rem;
+            height: auto;
+        }
+
+        .sectionB{
+            height: 400px;
+            max-width: 700px;
+            padding: 5px;
+            position: relative;
+            top: 40px;
+        }
+        .sectionE {
+            max-width: 620px;
+            height: 400px;
+            padding: 5px;
+            position: relative;
+            top: 10px;
+        }
+    
+        .sectionB .top,
+        .sectionB .center,
+        .sectionB .bottom,
+        .sectionE .top,
+        .sectionE .center,
+        .sectionE .bottom {
+            position: absolute;
+            transform: -20%;
+            padding: 10px;
+            margin: auto;
+        }
+    
+        .sectionB .center,
+        .sectionE .center {
+            font-size: 1rem;
+            top: 90px;
+        }
+    
+        .sectionB .bottom,
+        .sectionE .bottom {
+            font-size: 1rem;
+            top: 230px;
+        }
+    
+    
+        .sectionC ul, .sectionD ul {
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .sectionC li, .sectionD li {
+            max-width: 100%;
+        }
+    
+        .sectionC .mid, .sectionD .first {
+            font-size: 24px;
+        }
+    
+        .sectionC .low, .sectionD .second {
+            font-size: 14px;
+        }
+    
+        .sectionF .lastMan {
+            font-size: 14px;
+        }
+
 }
+
+
