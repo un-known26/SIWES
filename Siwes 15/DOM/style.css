@@ -1,0 +1,110 @@
+/**{
+    outline: 1px red solid;
+} */
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/736x/71/d3/ba/71d3ba928551425cc7ee419fffbf4192.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+div {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+
+}
+
+p {
+    color:rgb(5, 89, 128);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+li{
+    border: 1px cadetblue solid;
+    border-radius: 5px;
+    padding: 20px 50px;
+    list-style: none;
+}
+
+button{
+    color:rgb(145, 44, 0);
+    background-color: rgb(146, 136, 136);
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 60vw;
+}
+button:hover{
+    color: rgba(0, 0, 0, 0.336);
+}
+
+input{
+    margin: 15px;
+    max-width: 70%;
+}
+
+
+@media(max-width: 800px) {
+    body{
+        background-image: url(https://m.media-amazon.com/images/I/71EfETmQu2L.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: scroll;
+
+    }
+    h1{
+        font-size: 2rem;
+    }
+    button{
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+
+@media(max-width: 500px) {
+    body{
+        height: 100%;
+        background-image: url(https://i.pinimg.com/736x/9d/ec/f3/9decf30ec824cd18c6e1d0f17be4a1ea.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        gap:30px;
+    }
+    div{
+        gap: 30px;
+    }
+}
